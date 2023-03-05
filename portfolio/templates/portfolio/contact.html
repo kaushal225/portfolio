@@ -1,0 +1,20 @@
+{% extends 'portfolio/index.html' %}
+{% block title %} contact me {% endblock %}
+{% block body %}
+<div class="contact">
+    <p class="paragraph-skills"> contact</p>
+    <div class="mail-to-me">
+        <form method="post" class="form">
+        {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" value="submit" id="submit-button">SEND MAIL</button>
+        </form>
+    </div>
+    <div class="social-media-handle">
+        <a class="line-right" href="www.facebook.com"> <span class="fa-brands fa-facebook fa-3x contact-link "></span> <span class="line"></span></a> 
+        <a class="line-right" href=""> <span class="fa-brands fa-twitter fa-3x contact-link "></span> <span class="line"></span></a>
+        <a class="line-right" href=""> <span class="fa-brands fa-linkedin fa-3x contact-link "></span><span class="line"></span> </a>
+        <a href=""> <span class="fa-brands fa-whatsapp fa-3x contact-link"></span> </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}document{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portfolio/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+</head>
+<body>
+    
+   <div class="home">
+    <div class="sidebar">
+        <div class="img">
+         <img class="img1" src="{% static 'portfolio/images/zombie.png' %}" alt="image">
+        </div>
+        <div class="links">
+            <div class="link" >
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div class="link" >
+                <a href="#">Projects</a>
+            </div>
+            <div class="link" >
+                <a href="{% url 'skills' %}">Skills</a>
+            </div>
+            <div class="link" >
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+    </div>
+    {% block body %}
+    <div class="content">
+        <div class="upper-part">
+            <img class="img1" src="{% static 'portfolio/images/zombie.png' %}" alt="image">
+        </div>
+        <div class="about">
+            <button class="about-button">about</button>
+            <p class="about-content visible-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem suscipit sequi cumque numquam fuga nihil corrupti esse non similique iusto, odit atque eius iure dignissimos, a inventore? Possimus, dolores fuga.</p>
+        </div>
+    </div>
+   </div>
+   {% endblock %}
+   <script src="{% static 'portfolio/js/script.js' %}" defer></script>
+   <script src="{% static 'portfolio/js/bootstrap.min.js' %}" defer></script>
+   <script src="{% static 'portfolio/js/jquery.js' %}" defer></script>
+   <script src="{% static 'portfolio/js/popper.js' %}" defer></script>
+   <script src="{% static 'portfolio/js/all.min.js' %}" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(224, 255, 236);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.home{
+    /*height: 100vh;*/
+    height: 100%;
+    margin: 5px;
+    display: flex;
+    flex-wrap:wrap;
+    /*overflow: hidden;*/
+}
+
+
+
+/*styles for the sidebar start here*/
+
+.sidebar{
+    display: grid;
+    grid-template-columns:auto;
+    row-gap: 20px;
+    flex-grow: 1;
+    /*min-width: 300px;*/
+    min-width: 25%;
+    background-color: rgb(96, 180, 131);
+    border-right: solid black 5px;
+    padding-right: 5px;
+}
+
+/*styling and positioning individual link*/
+.link{
+    padding: 8px;
+    border: 1px solid rgb(135, 216, 222);
+    text-align: center;
+    background-color: rgb(207, 236, 241);
+}
+
+.link a{
+    text-decoration: none;
+    color: rgb(1, 3, 8);
+}
+
+
+a:hover{
+    text-decoration: underline;
+}
+ 
+div.link:hover{
+  background-color: rgb(64, 155, 158);
+}
+
+
+/*links part styling*/
+
+.links{
+    /*justify-self: start;*/
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+/*positioning the image*/
+
+.img{
+    justify-self: center;
+    align-self: end;
+    margin: 5px;
+}
+
+/*image styling*/
+
+.img1{
+    padding: 0;
+    width: 200px ;
+    height: 200px; 
+    border-radius: 50%;
+}
+
+/*content styling start here*/
+
+
+.content{
+    flex-grow: 1;
+    min-width:75%;
+    background-color: rgb(186, 204, 146);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:3fr 3fr;
+}
+.upper-part{
+    padding : 5px;
+    text-align: center;
+    border-bottom: 3px solid black;
+    align-self: end;
+}
+
+.about{
+    border: solid 1px rgb(11, 65, 128);
+    /*display: none;*/
+    display: flex;
+    flex-direction: column;
+    row-gap: 0px;
+    column-gap: 0px;
+    /*grid-template-rows: 1fr 9fr;*/
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.about-content{
+    display:none;
+
+}
+
+
+.about-button{
+    box-sizing: border-box;
+    margin-right: 5px;
+    margin-left: 5px;
+    /*margin-right: 10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    cursor: pointer;
+    /*width: 100%;*/
+    height: 50px;
+    text-align: left;
+    background-color: beige;
+
+}
+.about-button:after{
+    content: "\02795";
+    float: right;
+}
+
+.active:after{
+    content: "\2796";
+}
+
+.about-button:hover{
+    background-color:rgb(212, 177, 177);
+}
+.active{
+    border: none;
+    background-color:whitesmoke;
+    text-align: center;
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.visible-content{
+    flex-grow: 1;
+    background-color: beige;
+    text-align: left;
+    margin-left:5px;
+    margin-right: 5px;
+    margin-top: 0;
+    font-size: large;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+p{
+    margin: 0;
+}
+
+
+
+/* styles for skills.html*/
+
+.skills{
+    overflow: hidden;
+    flex-grow: 1;
+    min-width: 75%;
+}
+
+/* progress bars padding/styling*/
+
+.progress-bar-custom{
+    box-sizing: border-box;
+    margin: 10px 5px 10px 5px;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.skills-section{
+    /*display: grid;
+    grid-auto-rows: minmax(150px,auto);
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;*/
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+    margin: 50px;
+    box-sizing: border-box;
+}
+
+.paragraph-skills{
+    margin: 50px;
+    margin-right: 10px;
+    border-bottom: solid 5px rgb(123, 158, 26);
+    color: rgb(25, 139, 139);
+    font-size: large;
+}
+
+.progress-bar-wrapper{
+    flex-grow: 1;
+    min-width: 35%;
+    padding: 30px 0 30px 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+
+
+
+/*tiltle color of progress bar*/
+
+.progress-bar-title{
+    margin-right: 10px;
+    padding-left: 10px;
+    color:rgb(22, 95, 40);
+    align-self: center;
+}
+
+
+/* styling contact form*/ 
+label{
+    float: left;
+    margin-right: 7%;
+    width: max-content;
+}
+
+form{
+    display: flex;
+    padding: 5% 0 5% 5%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+input{
+    flex: 1;
+    width: 32%;
+    float: left;
+    margin: 5px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 2px;
+}
+
+
+#submit-button{
+ margin-top: 10px;
+ margin-left: 80px;
+ align-self: flex-start;
+}
+
+
+
+.mail-to-me{
+   border: 2px solid rgb(209, 216, 118);
+   margin: 20px 20px 0 20px; 
+}
+
+
+.contact-link{
+    display: inline-block;
+    /*border-right: 4px solid beige;*/
+    border-radius: 20%;
+    border-style: groove;   
+}
+
+.line{
+    display: inline-block;
+    height: 50px;
+    width: 2px;
+    margin-left: 20px;
+    background-color: aqua;
+}
+.contact{
+    max-width: 75%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.social-media-handle{
+    bottom: 0px;
+    display: flex;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.line-right{
+    padding-right: 50px;
+}
